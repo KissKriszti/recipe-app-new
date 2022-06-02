@@ -17,7 +17,7 @@ export default function FormPage() {
         title: "",
         body: "",
         ingredients: [],
-        selectedFile: ""
+        selectedFile: []
     });
 
     async function createNewRecipe(e) {
@@ -85,8 +85,8 @@ export default function FormPage() {
                 <textarea className='main-text' type="text" placeholder="How to make it" value={newRecipe.body} onChange={(e) => setNewRecipe({ ...newRecipe, body: e.target.value })} /> <br />
                 <FileBase
                     type="file"
-                    multiple={false}
-                    onDone={({ base64 }) => setNewRecipe({ ...newRecipe, selectedFile: base64 })}
+                    multiple={true}
+                    onDone={(data) => setNewRecipe({ ...newRecipe, selectedFile: data.map(base => base.base64) })}
                 /> <br />
                 <button onClick={createNewRecipe} className="submit">Submit</button>
                 <button className='cancel-button'><Link to='/'>Cancel</Link></button>

@@ -12,7 +12,7 @@ export default function SearchedRecipes({setRecipeSearch, fridgeIngredients}) {
                     return fridgeIngredients.some(i => recipe.ingredients.includes(i))
                 }).map(recipe => (
                     <div>
-                        <img key={recipe._id} src={recipe.selectedFile} alt=""/>
+                        <img key={recipe._id} src={recipe.selectedFile[0]} alt=""/>
                         <h4 >{recipe.title}</h4>
                     </div>
                 ))}

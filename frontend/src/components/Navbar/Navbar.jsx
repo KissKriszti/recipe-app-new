@@ -1,4 +1,7 @@
 import {Link} from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import KitchenIcon from '@mui/icons-material/Kitchen';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -6,11 +9,9 @@ export default function Navbar() {
         <div className="navbar">
             <nav>
                 <ul className='menu'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/fridge'>Fridge</Link>
-                    <li>Planner</li>
-                    <li>Settings</li>
-                    <li className='exit'>Exit</li>
+                    <Link to='/'><HomeIcon fontSize="large"/></Link>
+                    <Link to='/fridge'><KitchenIcon fontSize="large"/></Link>
+                    <li className='exit'><ExitToAppIcon fontSize="large"/></li>
                 </ul>
             </nav>
         </div>

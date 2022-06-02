@@ -18,7 +18,9 @@ export default function RecipePage({recipes}) {
                         <div key={recipe._id} className="centered-container">
                             <button className="back-button"><Link to='/'><ArrowBackIcon /> Back</Link></button>
                             <h1>{recipe.title} <ModeEditIcon className="edit-icon" fontSize="large" onClick={() => setIsUpdate(true)} /></h1>
-                            <img src={recipe.selectedFile} alt="" />
+                            <div>
+                                {recipe.selectedFile.map((image, i) => <img key={i} src={image} alt=""/>)}
+                            </div>
                             <h4>Ingredients:</h4>
                             <ul>
                                 {recipe.ingredients.map((ingredient, index) => (

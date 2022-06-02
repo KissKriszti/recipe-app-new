@@ -17,7 +17,7 @@ export default function Recipe({ recipe }) {
         <div className="recipe-card">
             <DeleteForeverIcon onClick={handleDelete} className="delete-icon" />
             <div className="image-container">
-                <img src={selectedFile} alt="" />
+                <img src={selectedFile[0]} alt="" />
             </div>
             <Link className="recipe-title" to={`/${_id}`}>{title}</Link>
             <p>{moment(createdAt).fromNow()}</p>

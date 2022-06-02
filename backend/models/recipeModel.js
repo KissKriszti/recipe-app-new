@@ -7,7 +7,9 @@ const recipe = new Schema({
     ingredients: [{
         type: String
     }],
-    selectedFile: String,
+    selectedFile: [{
+        type: String
+    }],
     createdAt: {
         type: Date,
         default: new Date()
