@@ -7,7 +7,7 @@ export default function Navbar() {
             <nav>
                 <ul className='menu'>
                     <Link to='/'>Home</Link>
-                    <li>Fridge</li>
+                    <Link to='/fridge'>Fridge</Link>
                     <li>Planner</li>
                     <li>Settings</li>
                     <li className='exit'>Exit</li>

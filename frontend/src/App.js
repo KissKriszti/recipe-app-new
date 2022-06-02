@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import MainPage from './components/MainPage/MainPage';
 import FormPage from './components/FormPage/FormPage';
 import RecipePage from './components/RecipePage/RecipePage';
+import FridgePage from './components/FridgePage/FridgePage';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/' element={<MainPage/>}/>
             <Route path='/form' element={<FormPage />}/>
             <Route path='/:id' element={<RecipePage recipes={recipes}/>}/>
+            <Route path='/fridge' element={<FridgePage/>} />
           </Routes>
         </div>
       </div>

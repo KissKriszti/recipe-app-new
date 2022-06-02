@@ -8,6 +8,11 @@
     color: white;
 }
 
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar li {
     list-style-type: none;
     line-height: 50px;
