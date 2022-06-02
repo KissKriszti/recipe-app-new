@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    padding: 0 80px;
+}
+
+.header input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #F6F6FF;
+}
+
+.header .add-new {
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border: 4px solid rgba(53, 47, 237, 0.33);
+    border-radius: 9px;
+    background-color: #605BFF;
+    color: white;
+}
+
+.recipe-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 90px;
+    padding: 10px 80px;
+    margin-top: 50px;
+    overflow-y: auto;
+}
+
+.recipe-container li {
+    list-style-type: none;
+}
+
+.recipe-card {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 9px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.recipe-card .recipe-title {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recipe-card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.delete-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+    color: #1710da;
+    cursor: pointer;
+}
+
+.image-container {
+    height: 130px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.recipe-card img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.recipe-card h4 {
+    margin: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.recipe-card p {
+    font-size: 12px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #adaaf8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #605BFF;
+}

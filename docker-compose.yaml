@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo
+    container_name: mongodb_recipeapp
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: recipedb
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpass
+    ports:
+      - 27017:27017
+    volumes:
+      - ./recipedb:/data/db
