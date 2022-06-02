@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useParams} from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import UpdateRecipe from "./UpdateRecipe";
 import './RecipePage.css';
 
@@ -15,6 +16,7 @@ export default function RecipePage({recipes}) {
                 recipes.filter(recipe => recipe._id === id)
                     .map(recipe => (
                         <div key={recipe._id} className="centered-container">
+                            <button className="back-button"><Link to='/'><ArrowBackIcon /> Back</Link></button>
                             <h1>{recipe.title} <ModeEditIcon className="edit-icon" fontSize="large" onClick={() => setIsUpdate(true)} /></h1>
                             <img src={recipe.selectedFile} alt="" />
                             <h4>Ingredients:</h4>
